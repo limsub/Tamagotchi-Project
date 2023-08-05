@@ -7,6 +7,21 @@
 
 import UIKit
 
+// 다마고치 정보 class
+class TamaInfo {
+    var tama: TamaType
+    var level: Int
+    var bob: Int
+    var mul: Int
+    
+    init(tama: TamaType, level: Int, bob: Int, mul: Int) {
+        self.tama = tama
+        self.level = level
+        self.bob = bob
+        self.mul = mul
+    }
+}
+
 // 다마고치 타입 enum
 // 타입에 따라 이름&이미지 계산
 enum TamaType: Int, CaseIterable {

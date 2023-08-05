@@ -77,12 +77,23 @@ class DetailSelectViewController: UIViewController {
     
     
     @IBAction func okButtonTapped(_ sender: UIButton) {
+        // UserDefaults 저장
+        UserDefaults.standard.set(tama?.rawValue, forKey: "tama")
+        UserDefaults.standard.set("대장", forKey: "userName")
+        UserDefaults.standard.set(0, forKey: "level")
+        UserDefaults.standard.set(0, forKey: "bob")
+        UserDefaults.standard.set(0, forKey: "mul")
+        UserDefaults.standard.set(true, forKey: "isLogin")
+        
+        
+        // 화면 전환
         let vc = storyboard?.instantiateViewController(withIdentifier: Identifier.MainViewController.rawValue) as! MainViewController
+        let nav = UINavigationController(rootViewController: vc)
         
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
+        nav.modalTransitionStyle = .crossDissolve
+        nav.modalPresentationStyle = .fullScreen
         
-        present(vc, animated: true)
+        present(nav, animated: true)
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {

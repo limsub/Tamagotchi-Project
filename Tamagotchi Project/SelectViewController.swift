@@ -77,10 +77,10 @@ extension SelectViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (indexPath.row < 3) {
             let vc = storyboard?.instantiateViewController(withIdentifier: Identifier.DetailSelectViewController.rawValue) as! DetailSelectViewController
-            
+            let nav = UINavigationController(rootViewController: vc)
             vc.tama = data[indexPath.row]
-            vc.modalPresentationStyle = .overFullScreen
-            present(vc, animated: true)
+            nav.modalPresentationStyle = .overFullScreen
+            present(nav, animated: true)
         }
     }
     
