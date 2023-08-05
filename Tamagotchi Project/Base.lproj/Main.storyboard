@@ -403,11 +403,41 @@
                     <view key="view" contentMode="scaleToFill" id="kfC-4Q-dbk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q2-y4-KLS">
+                                <rect key="frame" x="20" y="89" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M7J-pp-KUT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="p27-g3-xp0" eventType="editingDidEndOnExit" id="QyF-EH-ECV"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="m2q-m0-46g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9q2-y4-KLS" firstAttribute="top" secondItem="m2q-m0-46g" secondAttribute="top" constant="30" id="2YR-l2-jzj"/>
+                            <constraint firstItem="9q2-y4-KLS" firstAttribute="leading" secondItem="m2q-m0-46g" secondAttribute="leading" constant="20" id="L6h-WM-zcp"/>
+                            <constraint firstItem="m2q-m0-46g" firstAttribute="trailing" secondItem="9q2-y4-KLS" secondAttribute="trailing" constant="20" id="haj-FO-0ac"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qqq-Fl-klM" appends="YES" id="Cb4-uX-mKU"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="9q2-y4-KLS" id="f7x-c6-9VB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHP-eb-z3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Qqq-Fl-klM">
+                    <connections>
+                        <action selector="tapGesture:" destination="p27-g3-xp0" id="SU8-To-AR5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2039" y="2670"/>
         </scene>
