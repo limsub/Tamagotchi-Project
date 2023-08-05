@@ -17,8 +17,8 @@ class DetailSelectViewController: UIViewController {
     @IBOutlet var cancelButton: UIButton!
     @IBOutlet var okButton: UIButton!
     @IBOutlet var forCancelButtonView: UIView!  // cancelButton 색깔 바꾸기 용 view
-    
-    var tama: TamaType? = .bbang
+    @IBOutlet var backView: UIView! // 뒷배경 opacity용 view
+    var tama: TamaType?  
     
     
     
@@ -34,6 +34,10 @@ class DetailSelectViewController: UIViewController {
         popupView.backgroundColor = TamaColor.back.tcolor
         popupView.layer.cornerRadius = 10
         
+        backView.layer.backgroundColor = UIColor.black.cgColor.copy(alpha: 0.5)
+//        backView.layer.opacity = 0.5
+
+
         // 버튼 디자인
         okButton.layer.addBorder([.top], color: .systemGray4, width: 1)
         cancelButton.layer.addBorder([.top], color: .systemGray4, width: 1)
@@ -43,10 +47,9 @@ class DetailSelectViewController: UIViewController {
         cancelButton.setTitle("취소", for: .normal)
         okButton.setTitleColor(TamaColor.font.tcolor, for: .normal)
         cancelButton.setTitleColor(TamaColor.font.tcolor, for: .normal)
-        
-        
-        okButton.titleLabel?.font = .systemFont(ofSize: 10)
-        cancelButton.titleLabel?.font = .systemFont(ofSize: 15)
+        okButton.setTitleColor(.systemGray4, for: .highlighted)
+        cancelButton.setTitleColor(.systemGray4, for: .highlighted)
+    
         
         
         // 이름 레이블 디자인
@@ -70,4 +73,21 @@ class DetailSelectViewController: UIViewController {
         
         
     }
+    
+    
+    
+    @IBAction func okButtonTapped(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: Identifier.MainViewController.rawValue) as! MainViewController
+        
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        
+        present(vc, animated: true)
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
 }

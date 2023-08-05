@@ -9,7 +9,7 @@ import UIKit
 
 // 다마고치 타입 enum
 // 타입에 따라 이름&이미지 계산
-enum TamaType: Int {
+enum TamaType: Int, CaseIterable {
     case dda
     case bbang
     case jjack
@@ -58,5 +58,7 @@ enum TamaColor: Int {
 // 각 뷰컨트롤러 또는 셀에 대한 identifier
 enum Identifier: String {
     case SelectCollectionViewCell
+    case DetailSelectViewController
+    case MainViewController
 }
 

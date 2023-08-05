@@ -19,6 +19,7 @@
 		4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5412A7DD67700692ABD /* SelectViewController.swift */; };
 		4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */; };
 		4814F5462A7DED9500692ABD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5452A7DED9500692ABD /* Extension.swift */; };
+		4814F5482A7E0AA000692ABD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5472A7E0AA000692ABD /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4814F5412A7DD67700692ABD /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSelectViewController.swift; sourceTree = "<group>"; };
 		4814F5452A7DED9500692ABD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		4814F5472A7E0AA000692ABD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		4814F5262A7DD24300692ABD /* Tamagotchi Project */ = {
 			isa = PBXGroup;
 			children = (
+				4814F5472A7E0AA000692ABD /* MainViewController.swift */,
 				4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */,
 				4814F5272A7DD24300692ABD /* AppDelegate.swift */,
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
@@ -163,6 +166,7 @@
 				4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
 				4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */,
+				4814F5482A7E0AA000692ABD /* MainViewController.swift in Sources */,
 				4814F52A2A7DD24300692ABD /* SceneDelegate.swift in Sources */,
 				4814F5462A7DED9500692ABD /* Extension.swift in Sources */,
 			);
