@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectCollectionViewCell" id="gTV-IL-0wX" customClass="SelectCollectionViewCell" customModule="Tamagotchi_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="239" height="327"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="239" height="327"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X86-JP-Ml5">
+                        <rect key="frame" x="10" y="10" width="219" height="219"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="X86-JP-Ml5" secondAttribute="height" multiplier="1:1" id="MG5-e6-L51"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다마고치 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D2-Sb-my1">
+                        <rect key="frame" x="73.333333333333314" y="234" width="92.666666666666686" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="gNo-Be-NwL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="X86-JP-Ml5" secondAttribute="trailing" constant="10" id="GdT-6e-abX"/>
+                <constraint firstItem="2D2-Sb-my1" firstAttribute="top" secondItem="X86-JP-Ml5" secondAttribute="bottom" constant="5" id="QZW-bG-eGU"/>
+                <constraint firstItem="2D2-Sb-my1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gyL-Vd-mez"/>
+                <constraint firstItem="X86-JP-Ml5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="jMF-r6-2Tr"/>
+                <constraint firstItem="X86-JP-Ml5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="pTZ-8a-F0e"/>
+            </constraints>
+            <size key="customSize" width="239" height="327"/>
+            <connections>
+                <outlet property="mainImageView" destination="X86-JP-Ml5" id="KSw-V7-VOG"/>
+                <outlet property="nameLabel" destination="2D2-Sb-my1" id="xBZ-7b-2dN"/>
+            </connections>
+            <point key="canvasLocation" x="283.20610687022901" y="116.54929577464789"/>
+        </collectionViewCell>
+    </objects>
+</document>

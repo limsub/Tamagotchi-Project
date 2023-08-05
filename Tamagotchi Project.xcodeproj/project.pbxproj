@@ -13,6 +13,10 @@
 		4814F52F2A7DD24300692ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4814F52D2A7DD24300692ABD /* Main.storyboard */; };
 		4814F5312A7DD24400692ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4814F5302A7DD24400692ABD /* Assets.xcassets */; };
 		4814F5342A7DD24400692ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4814F5322A7DD24400692ABD /* LaunchScreen.storyboard */; };
+		4814F53D2A7DD4A600692ABD /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F53B2A7DD4A600692ABD /* SelectCollectionViewCell.swift */; };
+		4814F53E2A7DD4A600692ABD /* SelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4814F53C2A7DD4A600692ABD /* SelectCollectionViewCell.xib */; };
+		4814F5402A7DD58000692ABD /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F53F2A7DD58000692ABD /* About.swift */; };
+		4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5412A7DD67700692ABD /* SelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		4814F5302A7DD24400692ABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4814F5332A7DD24400692ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4814F5352A7DD24400692ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4814F53B2A7DD4A600692ABD /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		4814F53C2A7DD4A600692ABD /* SelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCollectionViewCell.xib; sourceTree = "<group>"; };
+		4814F53F2A7DD58000692ABD /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		4814F5412A7DD67700692ABD /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
 				4814F52B2A7DD24300692ABD /* ViewController.swift */,
 				4814F52D2A7DD24300692ABD /* Main.storyboard */,
+				4814F5412A7DD67700692ABD /* SelectViewController.swift */,
+				4814F53F2A7DD58000692ABD /* About.swift */,
+				4814F53B2A7DD4A600692ABD /* SelectCollectionViewCell.swift */,
+				4814F53C2A7DD4A600692ABD /* SelectCollectionViewCell.xib */,
 				4814F5302A7DD24400692ABD /* Assets.xcassets */,
 				4814F5322A7DD24400692ABD /* LaunchScreen.storyboard */,
 				4814F5352A7DD24400692ABD /* Info.plist */,
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4814F53E2A7DD4A600692ABD /* SelectCollectionViewCell.xib in Resources */,
 				4814F5342A7DD24400692ABD /* LaunchScreen.storyboard in Resources */,
 				4814F5312A7DD24400692ABD /* Assets.xcassets in Resources */,
 				4814F52F2A7DD24300692ABD /* Main.storyboard in Resources */,
@@ -138,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4814F5402A7DD58000692ABD /* About.swift in Sources */,
+				4814F53D2A7DD4A600692ABD /* SelectCollectionViewCell.swift in Sources */,
 				4814F52C2A7DD24300692ABD /* ViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
+				4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */,
 				4814F52A2A7DD24300692ABD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +309,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +319,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noah.Tamagotchi-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +341,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +351,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noah.Tamagotchi-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
