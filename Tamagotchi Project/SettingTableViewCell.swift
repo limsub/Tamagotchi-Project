@@ -24,11 +24,18 @@ class SettingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.backgroundColor = TamaColor.back.tcolor
     }
+    
+    
     
     func designCell(_ sender: Int) {
         
-        backView.backgroundColor = TamaColor.back.tcolor
+        //backView.backgroundColor = TamaColor.back.tcolor
+        
+//        backView.backgroundColor = .clear
+        
 
         
         firstImageView.image = UIImage(systemName: imageName[sender])

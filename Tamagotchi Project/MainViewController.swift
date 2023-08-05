@@ -173,7 +173,7 @@ class MainViewController: UIViewController {
         
         let level = (data.level < 10) ? String(data.level) : "9"
         imageName = imageName + level
-        print(imageName)
+        
         return imageName
     }
     
