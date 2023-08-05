@@ -15,7 +15,12 @@ class MainViewController: UIViewController {
     var bob: Int?
     var mul: Int?
     
-    var data: TamaInfo?
+    var data = TamaInfo(
+        tama: TamaType(rawValue: UserDefaults.standard.integer(forKey: "tama") )!,
+        level: UserDefaults.standard.integer(forKey: "level"),
+        bob: UserDefaults.standard.integer(forKey: "bob"),
+        mul: UserDefaults.standard.integer(forKey: "mul"))
+    
     
     
     
@@ -36,15 +41,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 데이터 받아오기
-        tama = TamaType(rawValue: UserDefaults.standard.integer(forKey: "tama") )
-        userName = UserDefaults.standard.string(forKey: "userName")
-        level = UserDefaults.standard.integer(forKey: "level")
-        bob = UserDefaults.standard.integer(forKey: "bob")
-        mul = UserDefaults.standard.integer(forKey: "mul")
+//        UserDefaults.standard.set(0, forKey: "bob")
+//        UserDefaults.standard.set(0, forKey: "mul")
+//        UserDefaults.standard.set(0, forKey: "level")
+//        data.bob = 0
+//        data.mul = 0
+//        data.level = 0
         
-        // 데이터 적용
-        data = TamaInfo(tama: tama!, level: level!, bob: bob!, mul: mul!)
+        userName = UserDefaults.standard.string(forKey: "userName")
+        
         
         // navigation item
         navigationItem.rightBarButtonItem = UIBarButtonItem(
@@ -60,12 +65,13 @@ class MainViewController: UIViewController {
         initialDesign()
 
     }
+    
     @objc
     func settingButtonTapped(_ sender: UIButton) {
         print("hi")
     }
     
-    // 초기 디자인
+    
     func initialDesign() {
         // view
         view.backgroundColor = TamaColor.back.tcolor
@@ -80,10 +86,11 @@ class MainViewController: UIViewController {
         explainLabel.font = .systemFont(ofSize: 14)
         
         // mainImage - 다마고치 종류 + 레벨에 따라 계산하는 함수 필요
-        mainImageView.image = UIImage(named: "1-1")
+        mainImageView.image = UIImage(named: selectMainImage())
+        
         
         // nameLabel
-        nameLabel.text = " " + tama!.tname + "  "
+        nameLabel.text = " " + data.tama.tname + "  "
         nameLabel.textColor = TamaColor.font.tcolor
         nameLabel.font = .systemFont(ofSize: 14)
         nameLabel.textAlignment = .center
@@ -92,7 +99,7 @@ class MainViewController: UIViewController {
         nameLabel.layer.borderWidth = 1
         
         // infoLabel
-        infoLabel.text = "Lv\(level!) • 밥알 \(bob!)개 • 물방울 \(mul!)개"
+        infoLabel.text = "Lv\(data.level) • 밥알 \(data.bob)개 • 물방울 \(data.mul)개"
         infoLabel.textColor = TamaColor.font.tcolor
         infoLabel.font = .systemFont(ofSize: 14)
         
@@ -126,12 +133,6 @@ class MainViewController: UIViewController {
         sender.layer.borderWidth = 1
         sender.layer.borderColor = TamaColor.font.tcolor.cgColor
         sender.layer.cornerRadius = 5
-        
-        
-//        sender.setTitle(title, for: .normal)
-//        sender.setTitle(title, for: .highlighted)
-//        sender.titleLabel?.font = .systemFont(ofSize: 9)
-     
     }
 
     func configureTextField(_ sender: UITextField, _ message: String) {
@@ -141,6 +142,9 @@ class MainViewController: UIViewController {
         sender.backgroundColor = .clear
         sender.textAlignment = .center
         
+        sender.keyboardType = .numberPad
+        
+        
         let centeredParagraphStyle = NSMutableParagraphStyle()
         centeredParagraphStyle.alignment = .center
         sender.attributedPlaceholder = NSAttributedString(
@@ -149,9 +153,114 @@ class MainViewController: UIViewController {
         )
     }
     
+    func selectMainImage() -> String {
+        var imageName = ""
+        
+        switch (data.tama) {
+        case .dda : imageName = "1-"
+        case .bbang : imageName = "2-"
+        case .jjack : imageName = "3-"
+        case .preparing:
+            break
+        }
+        
+        let level = (data.level < 10) ? String(data.level) : "9"
+        imageName = imageName + level
+        print(imageName)
+        return imageName
+    }
+    
+    
+    // 레벨 계산 함수
+    func calculateLevel() {
+        // 현재 데이터
+        let b =  Double(data.bob)
+        let m =  Double(data.mul)
+        
+        let sum = b/5 + m/2
+        
+        let level: Int
+        
+        switch sum {
+        case 0..<20: level = 1
+        case 20..<30 : level = 2
+        case 30..<40 : level = 3
+        case 40..<50 : level = 4
+        case 50..<60 : level = 5
+        case 60..<70 : level = 6
+        case 70..<80 : level = 7
+        case 80..<90 : level = 8
+        case 90..<100 : level = 9
+        default : level = 10
+            
+        }
+        
+        // 1. 데이터 업데이트
+        data.level = level
+        
+        // 2. UserDefaults 저장
+        UserDefaults.standard.set(level, forKey: "level")
+    }
     
     
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    
+    @IBAction func bobButtonTapped(_ sender: UIButton) {
+        // 1. data 값 업데이트
+        if let txt = bobTextField.text {
+            if let cnt = Int(txt) {
+                if (cnt < 100) {
+                    data.bob += cnt
+                }
+            } else {
+                data.bob += 1
+            }
+            
+            
+            
+            bobTextField.text = ""
+        }
+        // 2. userdefaults 업데이트
+        UserDefaults.standard.set(data.bob, forKey: "bob")
+        
+        // 3. 레벨 계산
+        calculateLevel()
+        
+        // ??
+        initialDesign()
+    }
+    
+    
+    @IBAction func mulButtonTapped(_ sender: UIButton) {
+        // 1. data 값 업데이트
+        if let txt = mulTextField.text {
+            if let cnt = Int(txt) {
+                if (cnt < 50) {
+                    data.mul += cnt
+                }
+            }
+            else {
+                data.mul += 1
+            }
+            
+            
+            
+            mulTextField.text = ""
+        }
+        
+        // 2. userdefaults 업데이트
+        UserDefaults.standard.set(data.mul, forKey: "mul")
+        
+        // 3. 레벨 계산
+        calculateLevel()
+        
+        
+        // ??
+        initialDesign()
+    }
+    
+    
 }

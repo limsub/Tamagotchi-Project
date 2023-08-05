@@ -80,7 +80,7 @@ class DetailSelectViewController: UIViewController {
         // UserDefaults 저장
         UserDefaults.standard.set(tama?.rawValue, forKey: "tama")
         UserDefaults.standard.set("대장", forKey: "userName")
-        UserDefaults.standard.set(0, forKey: "level")
+        UserDefaults.standard.set(1, forKey: "level")
         UserDefaults.standard.set(0, forKey: "bob")
         UserDefaults.standard.set(0, forKey: "mul")
         UserDefaults.standard.set(true, forKey: "isLogin")
