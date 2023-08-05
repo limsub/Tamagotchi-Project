@@ -64,11 +64,18 @@ class MainViewController: UIViewController {
         
         initialDesign()
 
+        
+        // 뒤로가기 버튼 커스텀
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
     @objc
     func settingButtonTapped(_ sender: UIButton) {
-        print("hi")
+        let vc = storyboard?.instantiateViewController(withIdentifier: Identifier.SettingViewController.rawValue) as! SettingViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

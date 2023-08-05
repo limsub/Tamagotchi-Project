@@ -20,6 +20,11 @@
 		4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */; };
 		4814F5462A7DED9500692ABD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5452A7DED9500692ABD /* Extension.swift */; };
 		4814F5482A7E0AA000692ABD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5472A7E0AA000692ABD /* MainViewController.swift */; };
+		48E4E8A02A7E7149007855C9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E89F2A7E7149007855C9 /* SettingViewController.swift */; };
+		48E4E8A22A7E7193007855C9 /* ModifyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E8A12A7E7193007855C9 /* ModifyNameViewController.swift */; };
+		48E4E8A42A7E71B2007855C9 /* ChangeTamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E8A32A7E71B2007855C9 /* ChangeTamaViewController.swift */; };
+		48E4E8A72A7E7502007855C9 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */; };
+		48E4E8A82A7E7502007855C9 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSelectViewController.swift; sourceTree = "<group>"; };
 		4814F5452A7DED9500692ABD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4814F5472A7E0AA000692ABD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		48E4E89F2A7E7149007855C9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		48E4E8A12A7E7193007855C9 /* ModifyNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyNameViewController.swift; sourceTree = "<group>"; };
+		48E4E8A32A7E71B2007855C9 /* ChangeTamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTamaViewController.swift; sourceTree = "<group>"; };
+		48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +80,17 @@
 		4814F5262A7DD24300692ABD /* Tamagotchi Project */ = {
 			isa = PBXGroup;
 			children = (
+				48E4E89F2A7E7149007855C9 /* SettingViewController.swift */,
 				4814F5472A7E0AA000692ABD /* MainViewController.swift */,
 				4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */,
 				4814F5272A7DD24300692ABD /* AppDelegate.swift */,
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
 				4814F52B2A7DD24300692ABD /* ViewController.swift */,
 				4814F52D2A7DD24300692ABD /* Main.storyboard */,
+				48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */,
+				48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */,
+				48E4E8A32A7E71B2007855C9 /* ChangeTamaViewController.swift */,
+				48E4E8A12A7E7193007855C9 /* ModifyNameViewController.swift */,
 				4814F5412A7DD67700692ABD /* SelectViewController.swift */,
 				4814F53F2A7DD58000692ABD /* About.swift */,
 				4814F5452A7DED9500692ABD /* Extension.swift */,
@@ -149,6 +164,7 @@
 				4814F53E2A7DD4A600692ABD /* SelectCollectionViewCell.xib in Resources */,
 				4814F5342A7DD24400692ABD /* LaunchScreen.storyboard in Resources */,
 				4814F5312A7DD24400692ABD /* Assets.xcassets in Resources */,
+				48E4E8A82A7E7502007855C9 /* SettingTableViewCell.xib in Resources */,
 				4814F52F2A7DD24300692ABD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,10 +181,14 @@
 				4814F52C2A7DD24300692ABD /* ViewController.swift in Sources */,
 				4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
+				48E4E8A02A7E7149007855C9 /* SettingViewController.swift in Sources */,
 				4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */,
 				4814F5482A7E0AA000692ABD /* MainViewController.swift in Sources */,
+				48E4E8A72A7E7502007855C9 /* SettingTableViewCell.swift in Sources */,
 				4814F52A2A7DD24300692ABD /* SceneDelegate.swift in Sources */,
+				48E4E8A42A7E71B2007855C9 /* ChangeTamaViewController.swift in Sources */,
 				4814F5462A7DED9500692ABD /* Extension.swift in Sources */,
+				48E4E8A22A7E7193007855C9 /* ModifyNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

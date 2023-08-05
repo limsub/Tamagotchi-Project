@@ -72,8 +72,13 @@ enum TamaColor: Int {
 
 // 각 뷰컨트롤러 또는 셀에 대한 identifier
 enum Identifier: String {
+    case SelectViewController
     case SelectCollectionViewCell
     case DetailSelectViewController
     case MainViewController
+    case SettingViewController
+    case SettingTableViewCell
+    case ModifyNameViewController
+    case ChangeTamaViewController
 }
 

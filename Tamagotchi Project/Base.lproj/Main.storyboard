@@ -366,6 +366,66 @@
             </objects>
             <point key="canvasLocation" x="1060.3053435114502" y="1734.5070422535211"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="k9W-88-5tT">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="H8B-K7-Emd" customClass="SettingViewController" customModule="Tamagotchi_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQo-f6-eCf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B19-qe-SEJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="byj-8Y-l9P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B19-qe-SEJ" firstAttribute="leading" secondItem="byj-8Y-l9P" secondAttribute="leading" id="dnS-G0-Jx1"/>
+                            <constraint firstItem="byj-8Y-l9P" firstAttribute="bottom" secondItem="B19-qe-SEJ" secondAttribute="bottom" id="h3K-Q2-IUd"/>
+                            <constraint firstItem="byj-8Y-l9P" firstAttribute="trailing" secondItem="B19-qe-SEJ" secondAttribute="trailing" id="iC5-OJ-kWr"/>
+                            <constraint firstItem="B19-qe-SEJ" firstAttribute="top" secondItem="byj-8Y-l9P" secondAttribute="top" id="oyn-bm-aq3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="settingTableView" destination="B19-qe-SEJ" id="8ev-Qy-t0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBB-mz-T3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="2671"/>
+        </scene>
+        <!--Modify Name View Controller-->
+        <scene sceneID="5E2-o3-4Yz">
+            <objects>
+                <viewController storyboardIdentifier="ModifyNameViewController" id="p27-g3-xp0" customClass="ModifyNameViewController" customModule="Tamagotchi_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kfC-4Q-dbk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="m2q-m0-46g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHP-eb-z3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="2670"/>
+        </scene>
+        <!--Change Tama View Controller-->
+        <scene sceneID="czV-qR-Xax">
+            <objects>
+                <viewController storyboardIdentifier="ChangeTamaViewController" id="5LD-O0-llV" customClass="ChangeTamaViewController" customModule="Tamagotchi_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ACf-Zc-vYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="emV-bD-yvz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ig-os-FeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="3453"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="opaqueSeparatorColor">
