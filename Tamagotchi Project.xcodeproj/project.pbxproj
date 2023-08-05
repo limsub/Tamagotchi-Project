@@ -17,6 +17,8 @@
 		4814F53E2A7DD4A600692ABD /* SelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4814F53C2A7DD4A600692ABD /* SelectCollectionViewCell.xib */; };
 		4814F5402A7DD58000692ABD /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F53F2A7DD58000692ABD /* About.swift */; };
 		4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5412A7DD67700692ABD /* SelectViewController.swift */; };
+		4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */; };
+		4814F5462A7DED9500692ABD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5452A7DED9500692ABD /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		4814F53C2A7DD4A600692ABD /* SelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		4814F53F2A7DD58000692ABD /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		4814F5412A7DD67700692ABD /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSelectViewController.swift; sourceTree = "<group>"; };
+		4814F5452A7DED9500692ABD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,14 @@
 		4814F5262A7DD24300692ABD /* Tamagotchi Project */ = {
 			isa = PBXGroup;
 			children = (
+				4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */,
 				4814F5272A7DD24300692ABD /* AppDelegate.swift */,
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
 				4814F52B2A7DD24300692ABD /* ViewController.swift */,
 				4814F52D2A7DD24300692ABD /* Main.storyboard */,
 				4814F5412A7DD67700692ABD /* SelectViewController.swift */,
 				4814F53F2A7DD58000692ABD /* About.swift */,
+				4814F5452A7DED9500692ABD /* Extension.swift */,
 				4814F53B2A7DD4A600692ABD /* SelectCollectionViewCell.swift */,
 				4814F53C2A7DD4A600692ABD /* SelectCollectionViewCell.xib */,
 				4814F5302A7DD24400692ABD /* Assets.xcassets */,
@@ -154,9 +160,11 @@
 				4814F5402A7DD58000692ABD /* About.swift in Sources */,
 				4814F53D2A7DD4A600692ABD /* SelectCollectionViewCell.swift in Sources */,
 				4814F52C2A7DD24300692ABD /* ViewController.swift in Sources */,
+				4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
 				4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */,
 				4814F52A2A7DD24300692ABD /* SceneDelegate.swift in Sources */,
+				4814F5462A7DED9500692ABD /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

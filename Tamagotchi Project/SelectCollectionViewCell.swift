@@ -27,7 +27,7 @@ class SelectCollectionViewCell: UICollectionViewCell {
         nameLabel.layer.borderColor = TamaColor.font.tcolor.cgColor
         nameLabel.layer.cornerRadius = 5
         nameLabel.layer.borderWidth = 1
-        nameLabel.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        //nameLabel.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     // 데이터
