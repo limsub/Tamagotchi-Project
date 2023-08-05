@@ -25,6 +25,7 @@
 		48E4E8A42A7E71B2007855C9 /* ChangeTamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E8A32A7E71B2007855C9 /* ChangeTamaViewController.swift */; };
 		48E4E8A72A7E7502007855C9 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */; };
 		48E4E8A82A7E7502007855C9 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */; };
+		48E4E8AA2A7E93EF007855C9 /* DetailChangeTamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4E8A92A7E93EF007855C9 /* DetailChangeTamaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		48E4E8A32A7E71B2007855C9 /* ChangeTamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTamaViewController.swift; sourceTree = "<group>"; };
 		48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		48E4E8A92A7E93EF007855C9 /* DetailChangeTamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChangeTamaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
 				4814F52B2A7DD24300692ABD /* ViewController.swift */,
 				4814F52D2A7DD24300692ABD /* Main.storyboard */,
+				48E4E8A92A7E93EF007855C9 /* DetailChangeTamaViewController.swift */,
 				48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */,
 				48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */,
 				48E4E8A32A7E71B2007855C9 /* ChangeTamaViewController.swift */,
@@ -182,6 +185,7 @@
 				4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
 				48E4E8A02A7E7149007855C9 /* SettingViewController.swift in Sources */,
+				48E4E8AA2A7E93EF007855C9 /* DetailChangeTamaViewController.swift in Sources */,
 				4814F5422A7DD67700692ABD /* SelectViewController.swift in Sources */,
 				4814F5482A7E0AA000692ABD /* MainViewController.swift in Sources */,
 				48E4E8A72A7E7502007855C9 /* SettingTableViewCell.swift in Sources */,

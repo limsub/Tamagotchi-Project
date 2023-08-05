@@ -80,5 +80,6 @@ enum Identifier: String {
     case SettingTableViewCell
     case ModifyNameViewController
     case ChangeTamaViewController
+    case DetailChangeTamaViewController
 }
 
