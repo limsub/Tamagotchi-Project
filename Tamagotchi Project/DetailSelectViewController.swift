@@ -37,9 +37,9 @@ class DetailSelectViewController: UIViewController {
         backView.layer.backgroundColor = UIColor.black.cgColor.copy(alpha: 0.5)
 //        backView.layer.opacity = 0.5
 
+        lineView.backgroundColor = .opaqueSeparator
 
         // 버튼 디자인
-        
         okButton.titleLabel?.adjustsFontForContentSizeCategory = true
 //        okButton.titleLabel?.text = "시작하기"
         okButton.setTitle("시작하기", for: .normal)

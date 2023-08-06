@@ -36,6 +36,8 @@ class DetailChangeTamaViewController: UIViewController {
         
         backView.layer.backgroundColor = UIColor.black.cgColor.copy(alpha: 0.5)
         
+        lineView.backgroundColor = .opaqueSeparator
+        
         okButton.layer.addBorder([.top], color: .systemGray4, width: 1)
         cancelButton.layer.addBorder([.top], color: .systemGray4, width: 1)
         forCancelButtonView.backgroundColor = .black
