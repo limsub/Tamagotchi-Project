@@ -253,8 +253,12 @@ class MainViewController: UIViewController {
         // 1. data 값 업데이트
         if let txt = bobTextField.text {
             if let cnt = Int(txt) {
-                if (cnt < 100) {
+                if (cnt < 100 && cnt > 0) {
                     data.bob += cnt
+                }
+                else {
+                    bobTextField.text = ""
+                    return
                 }
             } else {
                 data.bob += 1
@@ -279,8 +283,13 @@ class MainViewController: UIViewController {
         // 1. data 값 업데이트
         if let txt = mulTextField.text {
             if let cnt = Int(txt) {
-                if (cnt < 50) {
+                if (cnt < 50 && cnt > 0) {
                     data.mul += cnt
+                    
+                }
+                else {
+                    mulTextField.text = ""
+                    return
                 }
             }
             else {
