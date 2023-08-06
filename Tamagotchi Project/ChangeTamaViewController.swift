@@ -26,6 +26,13 @@ class ChangeTamaViewController: UIViewController {
         title = "다마고치 변경하기"
         view.backgroundColor = TamaColor.back.tcolor
         mainCollectionView.backgroundColor = TamaColor.back.tcolor
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
     }
 }
 

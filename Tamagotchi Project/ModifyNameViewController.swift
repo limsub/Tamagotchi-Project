@@ -18,15 +18,31 @@ class ModifyNameViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = TamaColor.back.tcolor
+        navigationController?.navigationBar.scrollEdgeAppearance?.backgroundColor = TamaColor.back.tcolor
 
-        title = "대장님 이름 정하기"
+        navigationItem.title = "대장님 이름 정하기"
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "저장",
             style: .plain,
             target: self,
             action: #selector(saveButtonTapped)
         )
-        navigationItem.titleView?.tintColor = TamaColor.back.tcolor
+        navigationItem.rightBarButtonItem?.tintColor = TamaColor.font.tcolor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: TamaColor.font.tcolor]
+        navigationController?.navigationBar.tintColor = TamaColor.font.tcolor
+        
+        
+//        navigationItem.backBarButtonItem?.tintColor = TamaColor.font.tcolor
+//        navigationItem.leftBarButtonItem?.tintColor = TamaColor.font.tcolor
+        
+//        navigationItem.titleView?.tintColor = TamaColor.back.tcolor
+
+        
+        
+        
+        
+        
+        
         
         nameTextField.borderStyle = .none
         nameTextField.layer.addBorder([.bottom], color: TamaColor.font.tcolor, width: 1)

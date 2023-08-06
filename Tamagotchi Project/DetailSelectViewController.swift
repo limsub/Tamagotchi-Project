@@ -39,16 +39,28 @@ class DetailSelectViewController: UIViewController {
 
 
         // 버튼 디자인
-        okButton.layer.addBorder([.top], color: .systemGray4, width: 1)
-        cancelButton.layer.addBorder([.top], color: .systemGray4, width: 1)
-        forCancelButtonView.backgroundColor = .black
-        forCancelButtonView.layer.opacity = 0.05
+        
+        okButton.titleLabel?.adjustsFontForContentSizeCategory = true
+//        okButton.titleLabel?.text = "시작하기"
         okButton.setTitle("시작하기", for: .normal)
         cancelButton.setTitle("취소", for: .normal)
         okButton.setTitleColor(TamaColor.font.tcolor, for: .normal)
         cancelButton.setTitleColor(TamaColor.font.tcolor, for: .normal)
         okButton.setTitleColor(.systemGray4, for: .highlighted)
         cancelButton.setTitleColor(.systemGray4, for: .highlighted)
+        
+        
+        okButton.titleLabel?.font = .systemFont(ofSize: 14)
+        cancelButton.titleLabel?.font = .systemFont(ofSize: 14)
+        
+        okButton.layer.addBorder([.top], color: .systemGray4, width: 1)
+        cancelButton.layer.addBorder([.top], color: .systemGray4, width: 1)
+        forCancelButtonView.backgroundColor = .black
+        forCancelButtonView.layer.opacity = 0.05
+        
+        
+//        okButton.configuration?.buttonSize = .mini
+//        okButton.configuration?.buttonSize = .mini
     
         
         

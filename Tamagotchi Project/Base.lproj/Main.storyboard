@@ -81,16 +81,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wmn-VI-I2x">
-                                <rect key="frame" x="70" y="133" width="253" height="117"/>
+                                <rect key="frame" x="70" y="133" width="253" height="147"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-n2-9wy">
-                                <rect key="frame" x="100" y="255" width="193" height="193"/>
+                                <rect key="frame" x="100" y="285" width="193" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ftM-n2-9wy" secondAttribute="height" multiplier="1:1" id="jjh-Rr-cVj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8l-Pd-EDk">
-                                <rect key="frame" x="176" y="453" width="41.333333333333343" height="30"/>
+                                <rect key="frame" x="176" y="483" width="41.333333333333343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0NZ-AN-YK4"/>
                                 </constraints>
@@ -99,13 +99,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgP-KY-gNU">
-                                <rect key="frame" x="176" y="488" width="41.333333333333343" height="30"/>
+                                <rect key="frame" x="176" y="518" width="41.333333333333343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U0U-qU-xha">
-                                <rect key="frame" x="70" y="548" width="253" height="35"/>
+                                <rect key="frame" x="70" y="578" width="253" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xex-hk-Su7">
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="35"/>
@@ -129,7 +129,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3ni-Ae-tcr">
-                                <rect key="frame" x="70" y="603" width="253" height="35"/>
+                                <rect key="frame" x="70" y="633" width="253" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ES7-pF-gds">
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="35"/>
@@ -156,7 +156,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQx-bC-5uA">
-                                <rect key="frame" x="176" y="166.33333333333334" width="41.333333333333343" height="20.333333333333343"/>
+                                <rect key="frame" x="94.666666666666671" y="132.66666666666666" width="203.66666666666663" height="117.66666666666666"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -169,8 +169,9 @@
                             <constraint firstItem="3ni-Ae-tcr" firstAttribute="top" secondItem="U0U-qU-xha" secondAttribute="bottom" constant="20" id="34F-Hj-KNk"/>
                             <constraint firstItem="j8l-Pd-EDk" firstAttribute="top" secondItem="ftM-n2-9wy" secondAttribute="bottom" constant="5" id="4LI-2R-eBq"/>
                             <constraint firstItem="Wmn-VI-I2x" firstAttribute="leading" secondItem="1Ug-EN-sJi" secondAttribute="leading" constant="70" id="8ul-h5-YxY"/>
+                            <constraint firstItem="TQx-bC-5uA" firstAttribute="width" secondItem="Wmn-VI-I2x" secondAttribute="width" multiplier="0.8" constant="1" id="9Yn-46-HtJ"/>
                             <constraint firstItem="Wmn-VI-I2x" firstAttribute="top" secondItem="1Ug-EN-sJi" secondAttribute="top" constant="30" id="B6N-zR-YgL"/>
-                            <constraint firstItem="1Ug-EN-sJi" firstAttribute="bottom" secondItem="3ni-Ae-tcr" secondAttribute="bottom" constant="180" id="CW4-WU-GsL"/>
+                            <constraint firstItem="1Ug-EN-sJi" firstAttribute="bottom" secondItem="3ni-Ae-tcr" secondAttribute="bottom" constant="150" id="CW4-WU-GsL"/>
                             <constraint firstItem="1Ug-EN-sJi" firstAttribute="trailing" secondItem="U0U-qU-xha" secondAttribute="trailing" constant="70" id="EYU-6I-95C"/>
                             <constraint firstItem="ftM-n2-9wy" firstAttribute="leading" secondItem="1Ug-EN-sJi" secondAttribute="leading" constant="100" id="HSS-fN-9iM"/>
                             <constraint firstItem="U0U-qU-xha" firstAttribute="leading" secondItem="1Ug-EN-sJi" secondAttribute="leading" constant="70" id="Mcm-xM-pj5"/>
@@ -182,6 +183,7 @@
                             <constraint firstItem="1Ug-EN-sJi" firstAttribute="trailing" secondItem="Wmn-VI-I2x" secondAttribute="trailing" constant="70" id="cs5-HZ-KL8"/>
                             <constraint firstItem="TQx-bC-5uA" firstAttribute="centerY" secondItem="Wmn-VI-I2x" secondAttribute="centerY" constant="-15" id="czZ-7Q-bMW"/>
                             <constraint firstItem="TgP-KY-gNU" firstAttribute="height" secondItem="j8l-Pd-EDk" secondAttribute="height" id="de4-YB-F4G"/>
+                            <constraint firstItem="TQx-bC-5uA" firstAttribute="height" secondItem="Wmn-VI-I2x" secondAttribute="height" multiplier="0.8" id="htt-fH-hma"/>
                             <constraint firstItem="1Ug-EN-sJi" firstAttribute="trailing" secondItem="3ni-Ae-tcr" secondAttribute="trailing" constant="70" id="kY8-Mz-agB"/>
                             <constraint firstItem="ftM-n2-9wy" firstAttribute="top" secondItem="Wmn-VI-I2x" secondAttribute="bottom" constant="5" id="oYf-xP-BIP"/>
                             <constraint firstItem="3ni-Ae-tcr" firstAttribute="leading" secondItem="1Ug-EN-sJi" secondAttribute="leading" constant="70" id="qxS-3w-5Da"/>
@@ -228,21 +230,22 @@
                                         <rect key="frame" x="0.0" y="414" width="146.66666666666666" height="45"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrz-Qx-lBF">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lrz-Qx-lBF">
                                         <rect key="frame" x="0.0" y="414" width="293" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csa-3D-tS1">
                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="45"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
                                                     <action selector="cancelButtonTapped:" destination="sgn-uf-vgt" eventType="touchUpInside" id="b8G-cO-Zvw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-ds-GvO">
                                                 <rect key="frame" x="146.66666666666663" y="0.0" width="146.33333333333337" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
                                                     <action selector="okButtonTapped:" destination="sgn-uf-vgt" eventType="touchUpInside" id="Oth-65-8zS"/>
                                                 </connections>
@@ -337,7 +340,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rxd-fs-PV7">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
                         <navigationBarAppearance key="compactAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                        <navigationBarAppearance key="compactScrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -530,21 +536,21 @@
                                         <rect key="frame" x="0.0" y="414" width="146.66666666666666" height="45"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q27-Y5-zPm">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q27-Y5-zPm">
                                         <rect key="frame" x="0.0" y="414" width="293" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehr-sb-RNF">
                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="45"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
                                                     <action selector="cancelButtonTapped:" destination="Lso-1K-yZJ" eventType="touchUpInside" id="dvN-ec-PAl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQN-35-vnc">
                                                 <rect key="frame" x="146.66666666666663" y="0.0" width="146.33333333333337" height="45"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
                                                     <action selector="okButtonTapped:" destination="Lso-1K-yZJ" eventType="touchUpInside" id="A7J-yJ-zEH"/>
                                                 </connections>

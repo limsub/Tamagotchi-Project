@@ -13,6 +13,12 @@ class SettingViewController: UIViewController {
     @IBOutlet var settingTableView: UITableView!
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        settingTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,13 +27,40 @@ class SettingViewController: UIViewController {
         let nib = UINib(nibName: Identifier.SettingTableViewCell.rawValue, bundle: nil)
         settingTableView.register(nib, forCellReuseIdentifier: Identifier.SettingTableViewCell.rawValue)
 
-        title = "설정"
+        navigationItem.title = "설정"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: TamaColor.font.tcolor]
+        navigationController?.navigationBar.tintColor = TamaColor.font.tcolor
+        
+        
+        
+        
+    
+        
+        
         
         view.backgroundColor = TamaColor.back.tcolor
         settingTableView.backgroundColor = TamaColor.back.tcolor
         
+        
+        
+        
+        
+        
         settingTableView.rowHeight = 50
         settingTableView.separatorInset.left = 0
+        
+        
+        
+        
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        
+        //navigationController?.navigationItem.backBarButtonItem?.tintColor = TamaColor.font.tcolor
     }
     
     func designTableView() {

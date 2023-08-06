@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
     
     var tama: TamaType?
@@ -24,6 +25,7 @@ class MainViewController: UIViewController {
     
     
     
+    
     @IBOutlet var explainLabel: UILabel!
     @IBOutlet var explainImageView: UIImageView!
     @IBOutlet var mainImageView: UIImageView!
@@ -35,7 +37,14 @@ class MainViewController: UIViewController {
     @IBOutlet var mulButton: UIButton!
     
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        userName = UserDefaults.standard.string(forKey: "userName")
+        
+        navigationItem.title = "\(userName!)님의 다마고치"
+        initialDesign()
+    }
     
     
     override func viewDidLoad() {
@@ -58,16 +67,23 @@ class MainViewController: UIViewController {
         
         
         navigationItem.title = "\(userName!)님의 다마고치"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: TamaColor.font.tcolor]
         
-        navigationItem.titleView?.tintColor = TamaColor.font.tcolor
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir", size: 20)!]
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance().tintColor = .systemPink
+//        navigationController?.navigationBar.barTintColor = .systemPink
+//        navigationController?.navigationBar.tintColor = .systemPink
+//        navigationItem.titleView?.tintColor = .white //TamaColor.font.tcolor
         navigationController?.navigationBar.layer.addBorder([.bottom], color: .systemGray4, width: 1)
+        
         
         initialDesign()
 
         
         // 뒤로가기 버튼 커스텀
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        backBarButtonItem.tintColor = .black
+        backBarButtonItem.tintColor = TamaColor.font.tcolor
         self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
@@ -88,7 +104,9 @@ class MainViewController: UIViewController {
         explainImageView.contentMode = .scaleAspectFit
         
         // explainLabel
-        explainLabel.text = "안녕하세여"
+        explainLabel.textAlignment = .center
+        explainLabel.numberOfLines = 0
+        explainLabel.text = malBubble(userName!)
         explainLabel.textColor = TamaColor.font.tcolor
         explainLabel.font = .systemFont(ofSize: 14)
         
@@ -207,6 +225,22 @@ class MainViewController: UIViewController {
         
         // 2. UserDefaults 저장
         UserDefaults.standard.set(level, forKey: "level")
+    }
+    
+    // 랜덤 말풍선 함수
+    func malBubble(_ sender: String) -> String {
+        
+        let list = [
+            "복습 아직 안하셨다구요? 지금 잠이 오세여?? \(sender)님??",
+            "테이블뷰 컨트롤러와 뷰컨트롤러는 어떤 차이가 있을까요?",
+            "\(sender)님 오늘 깃허브 푸시 하셨어영?",
+            "\(sender)님 밥주세요",
+            "\(sender)님 물 좀 더 주세요",
+            "좋은 하루입니다 \(sender)님",
+            "밥과 물을 잘 먹었더니 레벨업 했어요 감사합니다 \(sender)님"
+        ]
+        
+        return list.randomElement()!
     }
     
     

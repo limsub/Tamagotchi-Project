@@ -37,6 +37,13 @@ class SelectViewController: UIViewController {
         maincollectionView.backgroundColor = TamaColor.back.tcolor
         
         
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        
 //        // navigation background color..
 //        navigationItem.title = "하이"
 //        navigationItem.titleView?.backgroundColor = .black

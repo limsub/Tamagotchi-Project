@@ -46,6 +46,8 @@ class DetailChangeTamaViewController: UIViewController {
         cancelButton.setTitleColor(TamaColor.font.tcolor, for: .normal)
         okButton.setTitleColor(.systemGray4, for: .highlighted)
         cancelButton.setTitleColor(.systemGray4, for: .highlighted)
+        okButton.titleLabel?.font = .systemFont(ofSize: 14)
+        cancelButton.titleLabel?.font = .systemFont(ofSize: 14)
         
         nameLabel.textColor = TamaColor.font.tcolor
         nameLabel.textAlignment = .center
