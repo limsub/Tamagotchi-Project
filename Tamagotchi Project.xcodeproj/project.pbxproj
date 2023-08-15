@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5272A7DD24300692ABD /* AppDelegate.swift */; };
 		4814F52A2A7DD24300692ABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5292A7DD24300692ABD /* SceneDelegate.swift */; };
-		4814F52C2A7DD24300692ABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F52B2A7DD24300692ABD /* ViewController.swift */; };
 		4814F52F2A7DD24300692ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4814F52D2A7DD24300692ABD /* Main.storyboard */; };
 		4814F5312A7DD24400692ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4814F5302A7DD24400692ABD /* Assets.xcassets */; };
 		4814F5342A7DD24400692ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4814F5322A7DD24400692ABD /* LaunchScreen.storyboard */; };
@@ -32,7 +31,6 @@
 		4814F5242A7DD24300692ABD /* Tamagotchi Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tamagotchi Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4814F5272A7DD24300692ABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4814F5292A7DD24300692ABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4814F52B2A7DD24300692ABD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4814F52E2A7DD24300692ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4814F5302A7DD24400692ABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4814F5332A7DD24400692ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 				4814F5432A7DE9F100692ABD /* DetailSelectViewController.swift */,
 				4814F5272A7DD24300692ABD /* AppDelegate.swift */,
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
-				4814F52B2A7DD24300692ABD /* ViewController.swift */,
 				4814F52D2A7DD24300692ABD /* Main.storyboard */,
 				48E4E8A92A7E93EF007855C9 /* DetailChangeTamaViewController.swift */,
 				48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */,
@@ -181,7 +178,6 @@
 			files = (
 				4814F5402A7DD58000692ABD /* About.swift in Sources */,
 				4814F53D2A7DD4A600692ABD /* SelectCollectionViewCell.swift in Sources */,
-				4814F52C2A7DD24300692ABD /* ViewController.swift in Sources */,
 				4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
 				48E4E8A02A7E7149007855C9 /* SettingViewController.swift in Sources */,

@@ -99,13 +99,29 @@ class DetailSelectViewController: UIViewController {
         
         
         // 화면 전환
+        
+        // 기존 코드 : 뷰를 더 쌓는 구조
+//        let vc = storyboard?.instantiateViewController(withIdentifier: Identifier.MainViewController.rawValue) as! MainViewController
+//        let nav = UINavigationController(rootViewController: vc)
+//
+//        nav.modalTransitionStyle = .crossDissolve
+//        nav.modalPresentationStyle = .fullScreen
+//
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        
+        // 8/14 수정사항
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: Identifier.MainViewController.rawValue) as! MainViewController
         let nav = UINavigationController(rootViewController: vc)
         
-        nav.modalTransitionStyle = .crossDissolve
-        nav.modalPresentationStyle = .fullScreen
+        sceneDelegate?.window?.rootViewController = nav
+        sceneDelegate?.window?.makeKeyAndVisible()
         
-        present(nav, animated: true)
+        
+        
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {

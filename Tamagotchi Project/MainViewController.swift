@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
 //        data.mul = 0
 //        data.level = 0
         
-        userName = UserDefaults.standard.string(forKey: "userName")
+        //userName = UserDefaults.standard.string(forKey: "userName")
         
         
         // navigation item
@@ -66,7 +66,7 @@ class MainViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = TamaColor.font.tcolor
         
         
-        navigationItem.title = "\(userName!)님의 다마고치"
+        //navigationItem.title = "\(userName!)님의 다마고치"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: TamaColor.font.tcolor]
         
 //        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir", size: 20)!]
@@ -78,7 +78,7 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.layer.addBorder([.bottom], color: .systemGray4, width: 1)
         
         
-        initialDesign()
+        //initialDesign()
 
         
         // 뒤로가기 버튼 커스텀

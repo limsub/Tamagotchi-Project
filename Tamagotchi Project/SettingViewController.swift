@@ -16,7 +16,15 @@ class SettingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        settingTableView.reloadData()
+        // 이름 변경 후 돌아올 때 글자 업데이트
+        
+        // 기존 코드 : 모든 셀을 업데이트
+        //settingTableView.reloadData()
+        
+        // 뉴 코드 : 해당 셀만 업데이트
+        settingTableView.reloadRows(at: [IndexPath(item: 0, section: 0)], with: .automatic)
+        
+        
     }
     
     override func viewDidLoad() {
