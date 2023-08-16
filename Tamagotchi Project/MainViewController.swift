@@ -249,25 +249,67 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func bobButtonTapped(_ sender: UIButton) {
-        // 1. data 값 업데이트
-        if let txt = bobTextField.text {
-            if let cnt = Int(txt) {
-                if (cnt < 100 && cnt > 0) {
-                    data.bob += cnt
-                }
-                else {
-                    bobTextField.text = ""
-                    return
-                }
-            } else {
-                data.bob += 1
-            }
-            
-            
-            
-            bobTextField.text = ""
+    // 8/16 밥 or 물 텍스트필드에 입력된 값이 유효한지 검사
+    func checkTextField(_ text: String, _ type: Food) throws -> Int {
+        
+        // 빈 문자열일 때 -> + 1 (NOT ERROR)
+        guard !text.isEmpty else { return 1 }
+        
+        
+        // 숫자가 아닐 때 -> + 0 (ERROR)
+        guard Int(text) != nil else { throw FoodError.isNotInt }
+    
+        
+        // 범위에 맞지 않을 때 -> + 0 (ERROR)
+        guard let cnt = Int(text) else { return 0 }
+        switch type {
+        case .bob:
+            guard ( cnt > 0 && cnt < 100 ) else { throw FoodError.isNotInRange }
+        case .mul:
+            guard ( cnt > 0 && cnt < 50 ) else { throw FoodError.isNotInRange }
         }
+        
+        
+        // 굿 -> + Int(text) (NOT ERROR)
+        return cnt
+    }
+    
+    
+    @IBAction func bobButtonTapped(_ sender: UIButton) {
+        
+        // 8/16 Error Handling 문법 사용 (do / try / catch)
+        guard let txt = bobTextField.text else { return }
+        bobTextField.text = ""
+        var plusCnt = 0
+        
+        
+        do {
+            plusCnt = try checkTextField(txt, .bob)
+        } catch {
+            plusCnt = 0
+            return
+        }
+        
+        data.bob += plusCnt
+        
+        
+//        // 1. data 값 업데이트
+//        if let txt = bobTextField.text {
+//            if let cnt = Int(txt) {
+//                if (cnt < 100 && cnt > 0) {
+//                    data.bob += cnt
+//                }
+//                else {
+//                    bobTextField.text = ""
+//                    return
+//                }
+//            } else {
+//                data.bob += 1
+//            }
+//            bobTextField.text = ""
+//        }
+        
+        
         // 2. userdefaults 업데이트
         UserDefaults.standard.set(data.bob, forKey: "bob")
         
@@ -280,26 +322,43 @@ class MainViewController: UIViewController {
     
     
     @IBAction func mulButtonTapped(_ sender: UIButton) {
-        // 1. data 값 업데이트
-        if let txt = mulTextField.text {
-            if let cnt = Int(txt) {
-                if (cnt < 50 && cnt > 0) {
-                    data.mul += cnt
-                    
-                }
-                else {
-                    mulTextField.text = ""
-                    return
-                }
-            }
-            else {
-                data.mul += 1
-            }
-            
-            
-            
-            mulTextField.text = ""
+        
+        // 8/16 Error Handling 문법 사용 (do / try / catch)
+        guard let txt = mulTextField.text else { return }
+        mulTextField.text = ""
+        var plusCnt = 0
+        
+        
+        do {
+            plusCnt = try checkTextField(txt, .mul)
+        } catch {
+            plusCnt = 0
+            return
         }
+        
+        data.mul += plusCnt
+
+        
+//        // 1. data 값 업데이트
+//        if let txt = mulTextField.text {
+//            if let cnt = Int(txt) {
+//                if (cnt < 50 && cnt > 0) {
+//                    data.mul += cnt
+//
+//                }
+//                else {
+//                    mulTextField.text = ""
+//                    return
+//                }
+//            }
+//            else {
+//                data.mul += 1
+//            }
+//
+//
+//
+//            mulTextField.text = ""
+//        }
         
         // 2. userdefaults 업데이트
         UserDefaults.standard.set(data.mul, forKey: "mul")

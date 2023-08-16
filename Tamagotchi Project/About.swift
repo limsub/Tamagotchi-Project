@@ -7,6 +7,18 @@
 
 import UIKit
 
+// 물밥 에러
+enum FoodError: Error {
+    case isNotInRange
+    case isNotInt
+}
+
+// 물이냐 밥이냐
+enum Food {
+    case bob
+    case mul
+}
+
 // 다마고치 정보 class
 class TamaInfo {
     var tama: TamaType
