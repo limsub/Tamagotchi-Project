@@ -54,21 +54,50 @@ class ModifyNameViewController: UIViewController {
     
     @objc
     func saveButtonTapped(_ sender: UIButton) {
-        if let newName = nameTextField.text {
-            if (newName.count >= 2 && newName.count <= 6) {
-                UserDefaults.standard.set(newName, forKey: "userName")
-                navigationController?.popViewController(animated: true)
-            }
-            else {
-                let alert = UIAlertController(title: "글자 수 오류", message: "대장 이름은 2글자 이상 6글자 이하까지 가능합니다", preferredStyle: .alert)
-                
-                let ok = UIAlertAction(title: "확인", style: .default)
-                
-                alert.addAction(ok)
-                
-                present(alert, animated: true)
-            }
+        var newName: String = ""
+        
+        do {
+            newName = try checkTextField()
+        } catch {
+            showAlert()
+            return;
         }
+        
+        UserDefaults.standard.set(newName, forKey: "userName")
+        navigationController?.popViewController(animated: true)
+        
+        
+        
+        
+        
+        
+//        if let newName = nameTextField.text {
+//            if (newName.count >= 2 && newName.count <= 6) {
+//                UserDefaults.standard.set(newName, forKey: "userName")
+//                navigationController?.popViewController(animated: true)
+//            }
+//            else {
+//                showAlert()
+//            }
+//        }
+    }
+    
+    func checkTextField() throws -> String {
+        guard let txt = nameTextField.text else { throw NicknameError.nilName }
+        
+        guard (txt.count <= 6 && txt.count >= 2) else { throw NicknameError.isNotInRange }
+        
+        return txt
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "글자 수 오류", message: "대장 이름은 2글자 이상 6글자 이하까지 가능합니다", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "확인", style: .default)
+        
+        alert.addAction(ok)
+        
+        present(alert, animated: true)
     }
     
     @IBAction func returnTapped(_ sender: UITextField) {

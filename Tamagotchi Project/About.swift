@@ -7,6 +7,12 @@
 
 import UIKit
 
+// 닉네임 에러
+enum NicknameError: Error {
+    case nilName
+    case isNotInRange
+}
+
 // 물밥 에러
 enum FoodError: Error {
     case isNotInRange
