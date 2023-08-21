@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480565FD2A9337100071344D /* ButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480565FC2A9337100071344D /* ButtonDesignable.swift */; };
 		4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5272A7DD24300692ABD /* AppDelegate.swift */; };
 		4814F52A2A7DD24300692ABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4814F5292A7DD24300692ABD /* SceneDelegate.swift */; };
 		4814F52F2A7DD24300692ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4814F52D2A7DD24300692ABD /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		480565FC2A9337100071344D /* ButtonDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesignable.swift; sourceTree = "<group>"; };
 		4814F5242A7DD24300692ABD /* Tamagotchi Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tamagotchi Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4814F5272A7DD24300692ABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4814F5292A7DD24300692ABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				4814F5272A7DD24300692ABD /* AppDelegate.swift */,
 				4814F5292A7DD24300692ABD /* SceneDelegate.swift */,
 				4814F52D2A7DD24300692ABD /* Main.storyboard */,
+				480565FC2A9337100071344D /* ButtonDesignable.swift */,
 				48E4E8A92A7E93EF007855C9 /* DetailChangeTamaViewController.swift */,
 				48E4E8A52A7E7502007855C9 /* SettingTableViewCell.swift */,
 				48E4E8A62A7E7502007855C9 /* SettingTableViewCell.xib */,
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4814F5402A7DD58000692ABD /* About.swift in Sources */,
+				480565FD2A9337100071344D /* ButtonDesignable.swift in Sources */,
 				4814F53D2A7DD4A600692ABD /* SelectCollectionViewCell.swift in Sources */,
 				4814F5442A7DE9F100692ABD /* DetailSelectViewController.swift in Sources */,
 				4814F5282A7DD24300692ABD /* AppDelegate.swift in Sources */,
